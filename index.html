@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>FLASHFLIX - HOME</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f1dfbbf516.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <a href="#"><img class="logo" src="img/logo.png"></a>
+            <ul class="navbar">
+                <li class="nav-item mouse">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item mouse">
+                    <a class="nav-link" href="./search.html">BUSCAR</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="main">
+
+        <section id="filme-principal">
+
+        </section>
+
+
+        <section id="row-movies">
+            <h2>
+                Populares
+            </h2>
+
+            <div class="movies">
+                <div id="scroll-left" class=" scroll scroll-left" onclick="handleScrollLeft()">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div id="scroll-right" class=" scroll scroll-right" onclick="handleScrollRight()">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+
+                <script>
+                    let total = -4000;
+
+                    function handleScrollLeft() {
+                        total += 1200;
+
+                        if (total >= 0) {
+                            document.getElementById('destaque').style.cssText = `transition: 0.5s all; margin-left: 0px;`;
+                            total = -6400;
+                        }
+                        else {
+                            document.getElementById('destaque').style.cssText = `transition: 0.5s all; margin-left: ${total}px;`;
+                        }
+                    }
+
+                    function handleScrollRight() {
+                        total -= 1200;
+                        if (total <= -7400) {
+                            document.getElementById('destaque').style.cssText = `transition: 0.5s all; margin-left: 0px;`;
+                            total = 0;
+                        }
+                        else if (total > 0) {
+                            total = 0;
+                            document.getElementById('destaque').style.cssText = `transition: 0.5s all; margin-left: 0px;`;
+                        }
+                        else {
+                            document.getElementById('destaque').style.cssText = `transition: 0.5s all; margin-left: ${total}px;`;
+                        }
+                    }
+                </script>
+
+
+
+                <div id="destaque" style="margin-left: -3600px;">
+                    <!-- JAVASCRIPT -->
+                </div>
+            </div>
+
+        </section>
+
+        <section id="item">
+
+        </section>
+
+
+        <section id="avaliacoes">
+            <h2>
+                Últimas Avaliações
+            </h2>
+
+            <div class="avaliacoes">
+
+                <div class="avaliacao">
+
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <img src="img/foto1.png">
+                        <p class="nome">Steve Jobs</p>
+                    </div>
+
+                    <div class="box-avaliacao">
+                        <p> <em>Nemo</em> -
+                            O filme nemo é uma ótima animação e deveria ser mostrada
+                            para todas
+                            as crianças de todo mundo. O interesse e a ideia que o filme passa é de
+                            extrema importância.
+                        </p>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="data">
+                        <p>17/06/2021</p>
+                    </div>
+
+                </div>
+                <!--FIM AVALIACAO-1-->
+
+                <div class="avaliacao">
+
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <img src="img/foto2.png">
+                        <p class="nome">Mark Zuckerbeg</p>
+                    </div>
+
+                    <div class="row box-avaliacao">
+                        <p>
+                            <em>A Rede Social</em> -
+                            O filme "A Rede Social", foi um dos melhores filmes de 2010
+                            e
+                            merece ser conferido com atenção por retratar como um sujeito nada social
+                            foi capaz de criar a maior comunidade social da internet.
+                        </p>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="data">
+                        <p>17/06/2021</p>
+                    </div>
+
+                </div>
+                <!--FIM AVALIACAO-2-->
+
+                <div class="avaliacao">
+
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <img src="img/foto3.png">
+                        <p class="nome">Bruno Faria</p>
+                    </div>
+
+                    <div class="row box-avaliacao">
+                        <p> <em>Titanic</em> -
+                            Assim como Gloria Stuart, que também reflete no olhar a
+                            saudade de um grande amor perdido. Titanic é um grande filme que merece ser
+                            revisto, sempre que possível, em tela grande.
+                        </p>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class=" data">
+                        <p>17/06/2021</p>
+                    </div>
+
+                </div>
+                <!--FIM AVALIACAO-3-->
+            </div>
+            <!--FIM ROW AVALIACOES-->
+        </section>
+
+        <section id="entrevista">
+            <div>
+                <h2>
+                    Entrevistas & Making Of
+                </h2>
+            </div>
+
+            <div class="entrevistas">
+                <div class="entrevista">
+                    <iframe width="550" height="300" src="https://www.youtube.com/embed/mox0_xGO-Do"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div>
+                        <h4>O Coringa</h4>
+                        <p><b>Diretor:</b> Todd Phillips</p>
+                        <p><b>Roteiro:</b> Scott Silver, Todd Phillips</p>
+                    </div>
+                </div>
+
+                <div class="entrevista">
+                    <iframe width="550" height="300" src="https://www.youtube.com/embed/ZEHMssJZ0i0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div>
+                        <h4>Tropa de elite</h4>
+                        <p><b>Diretor:</b> José Padilha</p>
+                        <p><b>Roteiro:</b> Rodrigo Pimentel, John Kaylin, Bráulio Mantovani</p>
+                    </div>
+                </div>
+
+                <div class="entrevista">
+                    <iframe width="550" height="300" src="https://www.youtube.com/embed/YkVLdfqlvhE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div>
+                        <h4>Narcos</h4>
+                        <p><b>Diretor:</b> Fernando Coimbra</p>
+                        <p><b>Roteiro:</b> Chris Brancato, Carlo Bernard, Eric Newman</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <img class="logo" src="img/logo.png">
+        <p> Copyright 2021 - Disciplina de Desenvolvimento de Interfaces Web - ICEI PUC Minas </p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
