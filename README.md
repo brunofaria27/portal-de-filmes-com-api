@@ -3,9 +3,9 @@ WebSite desenvolvido nas aulas de Desenvolvimento de Interfaces Web, aborda o as
 > Link de acesso ao site: [FLASHFLIX](https://brunofaria27.github.io/portal-de-filmes-com-api/)
 
 ## Ferramentas Utilizadas
-- HTML
-- CSS
-- JavaScript / JQuery
+- HTML.
+- CSS.
+- JavaScript / JQuery.
 
 ## API
-- The Movie DataBase
+- The Movie DataBase.
